@@ -1,0 +1,46 @@
+{
+  "kycCheck": {
+    "requestId": "req-48931",
+    "status": "approved",
+    "riskScore": 0.12,
+    "checks": [
+      { "type": "document", "status": "pass", "confidence": 0.98 },
+      { "type": "liveness", "status": "pass", "confidence": 0.95 }
+    ],
+    "recommendation": "auto_approve"
+  },
+  "transactionInsights": {
+    "transactionId": "txn-90452",
+    "riskScore": 0.34,
+    "signals": [
+      { "name": "velocity", "score": 0.19, "explanation": "Recent spend spike" },
+      { "name": "device_change", "score": 0.65, "explanation": "New device fingerprint" }
+    ],
+    "recommendation": "challenge",
+    "nextActions": ["Request step-up authentication", "Notify fraud operations"]
+  },
+  "lendingEligibility": {
+    "applicationId": "app-73920",
+    "status": "conditionally_approved",
+    "score": 712,
+    "approvedAmount": 18000,
+    "terms": {
+      "apr": 6.2,
+      "termMonths": 36
+    },
+    "conditions": ["Submit income verification", "Complete banking linkage"]
+  },
+  "kycCheckError": {
+    "requestId": "req-48931",
+    "status": "manual_review",
+    "riskScore": 0.62,
+    "reason": "Document glare detected",
+    "recommendedAction": "Request new document capture"
+  },
+  "transactionInsightsError": {
+    "transactionId": "txn-90452",
+    "status": "error",
+    "message": "Unable to reach consortium network",
+    "retryAfterSeconds": 30
+  }
+}
