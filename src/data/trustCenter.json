@@ -1,0 +1,86 @@
+{
+  "endpoints": [
+    {
+      "name": "OAuth 2.0 Authorization",
+      "url": "https://auth.nthexception.dev/oauth2/authorize"
+    },
+    {
+      "name": "OAuth 2.0 Token",
+      "url": "https://auth.nthexception.dev/oauth2/token"
+    },
+    {
+      "name": "OpenID Connect Discovery",
+      "url": "https://auth.nthexception.dev/.well-known/openid-configuration"
+    },
+    {
+      "name": "JWKS",
+      "url": "https://auth.nthexception.dev/.well-known/jwks.json"
+    }
+  ],
+  "certifications": [
+    {
+      "title": "SOC 2 Type II",
+      "issued": "Mar 2024",
+      "summary": "Audited controls across security, availability, and confidentiality for the PaymentLabs platform."
+    },
+    {
+      "title": "ISO/IEC 27001",
+      "issued": "Jan 2024",
+      "summary": "Information security management certified across global data centers."
+    },
+    {
+      "title": "PCI DSS Level 1",
+      "issued": "Nov 2023",
+      "summary": "Cardholder data environment validated for continuous compliance and monitoring."
+    },
+    {
+      "title": "OpenID FAPI Advance",
+      "issued": "Feb 2024",
+      "summary": "Financial-grade API certification enabling strong client authentication."
+    }
+  ],
+  "securityFeatures": [
+    {
+      "title": "Dynamic Client Registration",
+      "detail": "Automated registration workflows with configurable scopes and policy enforcement."
+    },
+    {
+      "title": "Continuous Risk Scoring",
+      "detail": "Adaptive threat modeling across token issuance, session activity, and anomalous flows."
+    },
+    {
+      "title": "Granular Consent Management",
+      "detail": "End-user consent tracking with revocation APIs and auditable records."
+    },
+    {
+      "title": "Hardware-backed HSM",
+      "detail": "All signing keys issued from FIPS 140-2 Level 3 hardware security modules."
+    }
+  ],
+  "activity": [
+    {
+      "id": "log-1",
+      "event": "Token introspection latency reduced to 42ms",
+      "timestamp": "Apr 17, 2024 10:12 UTC",
+      "actor": "Platform Reliability"
+    },
+    {
+      "id": "log-2",
+      "event": "Rotated signing keys for OpenID clients",
+      "timestamp": "Apr 15, 2024 06:48 UTC",
+      "actor": "Security Automation"
+    },
+    {
+      "id": "log-3",
+      "event": "New certification attestation published",
+      "timestamp": "Apr 09, 2024 19:04 UTC",
+      "actor": "Compliance Ops"
+    },
+    {
+      "id": "log-4",
+      "event": "Real-time anomaly alert triaged",
+      "timestamp": "Apr 05, 2024 02:33 UTC",
+      "actor": "Trust Center"
+    }
+  ]
+}
