@@ -1,0 +1,110 @@
+[
+  {
+    "id": "kyc-identity",
+    "segment": "retail",
+    "category": "kyc",
+    "title": "KYC Identity Verification",
+    "tag": "Identity",
+    "version": "2.4",
+    "pricing": "Usage-based",
+    "rating": 4.8,
+    "published": "Mar 12, 2024",
+    "description": "Instantly verify consumer identities with global document orchestration and biometric risk scoring."
+  },
+  {
+    "id": "retail-transactions",
+    "segment": "retail",
+    "category": "transaction",
+    "title": "Retail Transaction Intelligence",
+    "tag": "Transactions",
+    "version": "1.9",
+    "pricing": "Tiered",
+    "rating": 4.7,
+    "published": "Feb 28, 2024",
+    "description": "Detect anomalous transaction behavior in real-time with PaymentLabs heuristics and ML ensembles."
+  },
+  {
+    "id": "retail-lending",
+    "segment": "retail",
+    "category": "lending",
+    "title": "Micro-Lending Decisioning",
+    "tag": "Lending",
+    "version": "3.1",
+    "pricing": "Enterprise",
+    "rating": 4.6,
+    "published": "Jan 31, 2024",
+    "description": "Approve micro-lending applications in seconds with unified credit insights and consent flows."
+  },
+  {
+    "id": "corporate-kyb",
+    "segment": "corporate",
+    "category": "kyb",
+    "title": "Corporate Onboarding & KYB",
+    "tag": "KYB",
+    "version": "2.2",
+    "pricing": "Usage-based",
+    "rating": 4.9,
+    "published": "Apr 5, 2024",
+    "description": "Automate business verification with global registries, UBO mapping, and watchlist coverage."
+  },
+  {
+    "id": "corporate-payments",
+    "segment": "corporate",
+    "category": "transaction",
+    "title": "Treasury Payment Orchestration",
+    "tag": "Payments",
+    "version": "1.7",
+    "pricing": "Tiered",
+    "rating": 4.5,
+    "published": "Mar 4, 2024",
+    "description": "Optimize treasury payments with smart routing, FX hedging, and reconciliation services."
+  },
+  {
+    "id": "corporate-compliance",
+    "segment": "corporate",
+    "category": "compliance",
+    "title": "Enterprise Compliance Hub",
+    "tag": "Compliance",
+    "version": "4.0",
+    "pricing": "Enterprise",
+    "rating": 4.7,
+    "published": "Dec 18, 2023",
+    "description": "Consolidate regulatory reporting, PSD3 readiness, and cross-border policy automation."
+  },
+  {
+    "id": "investment-risk",
+    "segment": "investment",
+    "category": "risk",
+    "title": "Investment Risk & Fraud Analytics",
+    "tag": "Risk",
+    "version": "3.4",
+    "pricing": "Usage-based",
+    "rating": 4.9,
+    "published": "Apr 1, 2024",
+    "description": "Monitor digital asset trading with adaptive anomaly detection and AML triggers."
+  },
+  {
+    "id": "investment-compliance",
+    "segment": "investment",
+    "category": "compliance",
+    "title": "MiFID II Reporting Service",
+    "tag": "Compliance",
+    "version": "2.8",
+    "pricing": "Tiered",
+    "rating": 4.6,
+    "published": "Feb 7, 2024",
+    "description": "Streamline trade surveillance and transaction reporting for MiFID II regulated entities."
+  },
+  {
+    "id": "investment-lending",
+    "segment": "investment",
+    "category": "lending",
+    "title": "Private Credit Origination",
+    "tag": "Lending",
+    "version": "1.5",
+    "pricing": "Enterprise",
+    "rating": 4.5,
+    "published": "Jan 15, 2024",
+    "description": "Digitize private credit pipelines with collaborative underwriting and covenant monitoring."
+  }
+]
