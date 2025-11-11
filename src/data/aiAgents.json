@@ -1,0 +1,26 @@
+[
+  {
+    "id": "kyc-copilot",
+    "name": "KYC Copilot",
+    "tagline": "In development — coming soon to Open Finance Portal",
+    "status": "Guided identity review workflows with AI-supported escalation."
+  },
+  {
+    "id": "transaction-risk",
+    "name": "Transaction Risk Copilot",
+    "tagline": "In development — coming soon to Open Finance Portal",
+    "status": "Streaming fraud anomaly detections with conversational explanations."
+  },
+  {
+    "id": "aml-assistant",
+    "name": "AML Assistant",
+    "tagline": "In development — coming soon to Open Finance Portal",
+    "status": "Automated case summarization and SAR drafting recommendations."
+  },
+  {
+    "id": "data-quality",
+    "name": "Data Quality Analyzer",
+    "tagline": "In development — coming soon to Open Finance Portal",
+    "status": "Unified monitoring of API payload hygiene and schema drift."
+  }
+]
