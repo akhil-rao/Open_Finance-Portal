@@ -1,0 +1,303 @@
+[
+  {
+    "id": "kyc-identity",
+    "title": "KYC Identity Verification",
+    "method": "POST",
+    "path": "/identity/v2/kyc/check",
+    "summary": "Verify an individual's identity across 200+ countries with biometric fallback.",
+    "version": "2.4",
+    "pricing": "Usage-based",
+    "rating": 4.8,
+    "playground": true,
+    "mockPath": "kycCheck",
+    "compliance": "SOC 2, GDPR, ISO 27001",
+    "endpoints": [
+      {
+        "method": "POST",
+        "path": "/identity/v2/kyc/check",
+        "description": "Submit identity payload for verification"
+      },
+      {
+        "method": "GET",
+        "path": "/identity/v2/kyc/status/{requestId}",
+        "description": "Retrieve verification status"
+      }
+    ],
+    "sampleRequest": {
+      "referenceId": "req-48931",
+      "person": {
+        "firstName": "Avery",
+        "lastName": "Quinn",
+        "dob": "1992-07-15",
+        "document": {
+          "type": "passport",
+          "number": "993746281",
+          "issuingCountry": "US"
+        }
+      }
+    },
+    "sampleResponse": {
+      "requestId": "req-48931",
+      "status": "approved",
+      "riskScore": 0.12,
+      "verifications": [
+        { "signal": "document_authenticity", "status": "pass" },
+        { "signal": "selfie_liveness", "status": "pass" }
+      ]
+    },
+    "requestExample": {
+      "headers": {
+        "Authorization": "Bearer <token>",
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "referenceId": "req-48931",
+        "person": {
+          "firstName": "Avery",
+          "lastName": "Quinn",
+          "dob": "1992-07-15",
+          "document": {
+            "type": "passport",
+            "number": "993746281",
+            "issuingCountry": "US"
+          }
+        }
+      }
+    },
+    "responseExample": {
+      "status": 200,
+      "body": {
+        "requestId": "req-48931",
+        "status": "approved",
+        "riskScore": 0.12,
+        "recommendation": "auto-approve"
+      }
+    }
+  },
+  {
+    "id": "retail-transactions",
+    "title": "Retail Transaction Intelligence",
+    "method": "GET",
+    "path": "/transactions/v1/intelligence",
+    "summary": "Surface behavioral anomalies and network risk patterns for card transactions.",
+    "version": "1.9",
+    "pricing": "Tiered",
+    "rating": 4.7,
+    "playground": true,
+    "mockPath": "transactionInsights",
+    "compliance": "PCI DSS, ISO 27017",
+    "endpoints": [
+      {
+        "method": "GET",
+        "path": "/transactions/v1/intelligence",
+        "description": "Fetch risk analytics for a transaction"
+      },
+      {
+        "method": "GET",
+        "path": "/transactions/v1/intelligence/summary",
+        "description": "Retrieve aggregated intelligence scores"
+      }
+    ],
+    "sampleRequest": {},
+    "sampleResponse": {
+      "transactionId": "txn-90452",
+      "riskScore": 0.34,
+      "signals": [
+        { "name": "velocity", "value": 0.19 },
+        { "name": "merchant_score", "value": 0.81 }
+      ],
+      "recommendation": "challenge"
+    },
+    "requestExample": {
+      "query": {
+        "transactionId": "txn-90452",
+        "accountId": "acct-1930",
+        "amount": 184.22,
+        "currency": "USD"
+      }
+    },
+    "responseExample": {
+      "status": 200,
+      "body": {
+        "riskScore": 0.34,
+        "recommendation": "challenge",
+        "explanations": [
+          "Historical velocity spike",
+          "Merchant fraud index at 0.81"
+        ]
+      }
+    }
+  },
+  {
+    "id": "retail-lending",
+    "title": "Micro-Lending Decisioning",
+    "method": "POST",
+    "path": "/lending/v3/eligibility",
+    "summary": "Automate credit risk assessments with bureau, cashflow, and behavioral data.",
+    "version": "3.1",
+    "pricing": "Enterprise",
+    "rating": 4.6,
+    "playground": true,
+    "mockPath": "lendingEligibility",
+    "compliance": "FCRA, GLBA",
+    "endpoints": [
+      {
+        "method": "POST",
+        "path": "/lending/v3/eligibility",
+        "description": "Submit application data for eligibility scoring"
+      },
+      {
+        "method": "GET",
+        "path": "/lending/v3/offers/{applicationId}",
+        "description": "Retrieve qualified offers"
+      }
+    ],
+    "sampleRequest": {
+      "applicationId": "app-73920",
+      "applicant": {
+        "firstName": "Jordan",
+        "lastName": "Li",
+        "income": 82000,
+        "employmentStatus": "full_time"
+      },
+      "loan": {
+        "amount": 15000,
+        "termMonths": 36,
+        "purpose": "electric_vehicle"
+      }
+    },
+    "sampleResponse": {
+      "applicationId": "app-73920",
+      "status": "conditionally_approved",
+      "score": 712,
+      "recommendedAPR": 6.2,
+      "nextSteps": ["Collect bank statements", "Schedule identity verification call"]
+    },
+    "requestExample": {
+      "headers": {
+        "Authorization": "Bearer <token>",
+        "Idempotency-Key": "8e2f6b60-1234"
+      },
+      "body": {
+        "applicationId": "app-73920",
+        "loan": {
+          "amount": 15000,
+          "termMonths": 36
+        }
+      }
+    },
+    "responseExample": {
+      "status": 200,
+      "body": {
+        "status": "conditionally_approved",
+        "score": 712,
+        "maxAmount": 18000
+      }
+    }
+  },
+  {
+    "id": "corporate-kyb",
+    "title": "Corporate Onboarding & KYB",
+    "method": "POST",
+    "path": "/kyb/v2/businesses",
+    "summary": "End-to-end business onboarding with UBO discovery and document review.",
+    "version": "2.2",
+    "pricing": "Usage-based",
+    "rating": 4.9,
+    "playground": false,
+    "mockPath": "kybBusiness",
+    "compliance": "SOC 2, ISO 22301",
+    "endpoints": [
+      {
+        "method": "POST",
+        "path": "/kyb/v2/businesses",
+        "description": "Initiate business verification"
+      },
+      {
+        "method": "GET",
+        "path": "/kyb/v2/businesses/{businessId}",
+        "description": "Retrieve KYB review status"
+      }
+    ],
+    "sampleRequest": {
+      "businessId": "biz-20483",
+      "legalName": "Atlas Robotics Ltd",
+      "jurisdiction": "UK",
+      "ubo": [
+        { "name": "Amelia Chen", "ownership": 42 },
+        { "name": "Darius Flint", "ownership": 21 }
+      ]
+    },
+    "sampleResponse": {
+      "businessId": "biz-20483",
+      "status": "review_required",
+      "flags": ["Beneficial owner mismatch", "Pending address verification"]
+    },
+    "requestExample": {
+      "body": {
+        "businessId": "biz-20483",
+        "jurisdiction": "UK"
+      }
+    },
+    "responseExample": {
+      "status": 202,
+      "body": {
+        "status": "review_required",
+        "sla": "4h"
+      }
+    }
+  },
+  {
+    "id": "corporate-payments",
+    "title": "Treasury Payment Orchestration",
+    "method": "POST",
+    "path": "/payments/v1/execute",
+    "summary": "Route treasury payments with FX optimization and compliance screening.",
+    "version": "1.7",
+    "pricing": "Tiered",
+    "rating": 4.5,
+    "playground": false,
+    "mockPath": "treasuryPayment",
+    "compliance": "ISO 20022, SWIFT CSP",
+    "endpoints": [
+      {
+        "method": "POST",
+        "path": "/payments/v1/execute",
+        "description": "Initiate a treasury payment"
+      },
+      {
+        "method": "GET",
+        "path": "/payments/v1/quotes",
+        "description": "Retrieve FX quotes"
+      }
+    ],
+    "sampleRequest": {
+      "paymentId": "pay-99812",
+      "amount": 250000,
+      "currency": "USD",
+      "beneficiary": {
+        "name": "Ionis Materials GmbH",
+        "iban": "DE89370400440532013000"
+      }
+    },
+    "sampleResponse": {
+      "paymentId": "pay-99812",
+      "status": "queued",
+      "fxRate": 0.92,
+      "route": "swift_tier1"
+    },
+    "requestExample": {
+      "body": {
+        "paymentId": "pay-99812",
+        "currency": "USD"
+      }
+    },
+    "responseExample": {
+      "status": 200,
+      "body": {
+        "status": "queued",
+        "eta": "2024-04-21T18:00:00Z"
+      }
+    }
+  }
+]
